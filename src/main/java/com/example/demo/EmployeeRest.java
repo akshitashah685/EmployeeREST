@@ -1,20 +1,24 @@
 package com.example.demo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class EmployeeRest {
-	
-	int empId;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	Integer empId;
 	String empName;
 	String empDept;
-	int empSalary;
+	Integer empSalary;
 	public EmployeeRest() {
 		// TODO Auto-generated constructor stub
 		
 	}
 	
-	public EmployeeRest(int empId, String empName, String empDept, int empSalary) {
+	public EmployeeRest(Integer empId, String empName, String empDept, Integer empSalary) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
@@ -22,10 +26,10 @@ public class EmployeeRest {
 		this.empSalary = empSalary;
 	}
 
-	public int getEmpId() {
+	public Integer getEmpId() {
 		return empId;
 	}
-	public void setEmpId(int empId) {
+	public void setEmpId(Integer empId) {
 		this.empId = empId;
 	}
 	public String getEmpName() {
@@ -40,10 +44,10 @@ public class EmployeeRest {
 	public void setEmpDept(String empDept) {
 		this.empDept = empDept;
 	}
-	public int getEmpSalary() {
+	public Integer getEmpSalary() {
 		return empSalary;
 	}
-	public void setEmpSalary(int empSalary) {
+	public void setEmpSalary(Integer empSalary) {
 		this.empSalary = empSalary;
 	}
 
