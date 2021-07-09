@@ -17,10 +17,8 @@ public class EmployeeRest {
 		// TODO Auto-generated constructor stub
 		
 	}
-	
-	public EmployeeRest(Integer empId, String empName, String empDept, Integer empSalary) {
+	public EmployeeRest(String empName, String empDept, Integer empSalary) {
 		super();
-		this.empId = empId;
 		this.empName = empName;
 		this.empDept = empDept;
 		this.empSalary = empSalary;
